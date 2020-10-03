@@ -10,22 +10,34 @@
   <h2>JavaScript aperfeicaomento 03</h2>
   <div id="itemLista">  
 
-    <ul id="nomes">
+    <p id="nomes"></p>
      
-    </ul><br>
     </div>
     <script>
-        var deuses = [" Odin "," Loki "," Thor "];
+        var deuses = ["Odin","Loki","Thor"];
         var a = document.createElement('li');
         var b = document.createElement('li');
         var c = document.createElement('li');
+        let text = "" ;
+         deuses.sort()
   
-        deuses.sort()
+       
+      for(let i=0 ; i < deuses.length ; i++){
+       text+= deuses[i]+ " - tamanho: " + deuses[i].length + "<br>" ;
+       
+      }
+      document.getElementById("nomes").innerHTML= text ;
+      
 
-        document.getElementById("itemLista").appendChild(a).innerHTML=deuses[0];
-        document.getElementById("itemLista").appendChild(b).innerHTML=deuses[1];
-        document.getElementById("itemLista").appendChild(c).innerHTML=deuses[2];
-        document.getElementById("nomes").innerHTML=deuses.length;
+
+     
+
+        // document.getElementById("itemLista").appendChild(a).innerHTML=deuses[0].length;
+        // document.getElementById("itemLista").appendChild(b).innerHTML=deuses[1].length
+        // document.getElementById("itemLista").appendChild(c).innerHTML=deuses[2].length;
+        // document.getElementById("nomes").innerHTML=deuses.length;
+        
+
       
        
     </script>
